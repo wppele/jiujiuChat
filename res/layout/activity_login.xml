@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/login_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/ic_launcher" />
+
+    <!-- 用户名控件  -->
+    <EditText
+        android:id="@+id/login_et_username"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/login_pic"
+        android:layout_marginTop="40dp"
+        android:hint="@string/username" />
+	
+    <!-- 密码控件 -->
+    <EditText
+        android:id="@+id/login_et_password"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/login_et_username"
+        android:layout_marginTop="0.5dp"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <!-- 登陆按钮，提交用户名与密码 -->
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/login_et_password"
+        android:layout_marginTop="1dp"
+        android:background="#6f9ecc"
+        android:text="@string/login"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:onClick="LoginOnClick" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_btn_login"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_tip"
+            android:textColor="#000"
+            android:textSize="18sp" />
+        
+        <!-- 注册链接，点击进入注册用户页面 -->
+        <TextView
+            android:id="@+id/login_register_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_register_link"
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:onClick="LoginOnClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="      "/>
+    </LinearLayout>
+
+</RelativeLayout>
