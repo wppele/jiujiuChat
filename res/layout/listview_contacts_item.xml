@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="61dp"
+    android:orientation="vertical">
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal">
+	    <!-- 头像显示 -->
+	    <ImageView 
+	        android:id="@+id/contacts_item_iv_headpicture"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:layout_gravity="center_vertical"
+			android:src="@drawable/ic_launcher"
+	        />
+	    <!-- 聊天记录中昵称和心情 -->
+	    <LinearLayout 
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical"
+		    android:layout_weight="2"
+	     	>
+		    <TextView 
+		        android:id="@+id/contacts_item_tv_friendName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:text="守莣"
+		        />
+		    <TextView 
+		        android:id="@+id/contacts_item_tv_mind"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dp"
+		        android:text="哈哈哈哈哈哈哈哈啊哈"
+		        />
+		    
+	    </LinearLayout>
+		<!-- 状态显示 -->
+		<TextView 
+		        android:id="@+id/contacts_item_tv_state"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginTop="5dp"
+		        android:text="在线"
+		        />
+	</LinearLayout>
+	
+	<!-- 间隔线 -->
+	<ImageView 
+        android:id="@+id/contacts_iv_will"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- 首页菜单字体默认颜色 -->
+    <color name="home_menu_text">#85888f</color>
+	<!-- 首页菜单字体选中颜色 -->
+    <color name="home_menu_text_checked">#F53937</color>
+</resources>

@@ -4,6 +4,7 @@ import com.wppele.entity.Users;
 
 import android.R.string;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,17 +31,30 @@ public class LoginActivity extends Activity {
 	public void LoginOnClick(View view){
 		switch (view.getId()) {
 		case R.id.login_register_link:
-			Log.e("btn","注册链接");
+			jumpToRegisterActivity();
+			//Log.e("btn","注册链接");
 			break;
 		case R.id.login_btn_login:
 			//点击登陆按钮获取user账户信息。
-			users.setUsername(et_username.getText().toString());
-			users.setPassword(et_password.getText().toString());
-			Log.e("btn",users.getUsername()+"  "+users.getPassword());
+//			users.setUsername(et_username.getText().toString());
+//			users.setPassword(et_password.getText().toString());
+//			Log.e("btn",users.getUsername()+"  "+users.getPassword());
+			//跳转到主页面，测试程序使用
+			jumpToMainActivity();
 			break;
 
 		default:
 			break;
 		}
+	}
+	private void jumpToRegisterActivity() {
+		Intent intent=new Intent();
+		intent.setClass(LoginActivity.this,RegisterActivity.class);
+		this.startActivity(intent);
+	}
+	private void jumpToMainActivity(){
+		Intent intent=new Intent();
+		intent.setClass(LoginActivity.this,MainActivity.class);
+		this.startActivity(intent);
 	}
 }

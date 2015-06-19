@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment底部设置 -->
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal" 
+    android:background="@drawable/footer_menubg"
+    android:gravity="center_vertical"
+    android:id="@+id/footermenu_rgroup"
+    >
+    <RadioButton
+        android:id="@+id/menu_btn_message"
+        style="@style/radioStyle"
+        android:text="消息"
+        android:drawableTop="@drawable/footer_xiaoxi_selector"
+        android:checked="true"
+        />
+    <RadioButton
+        android:id="@+id/menu_btn_contacts"
+        style="@style/radioStyle"
+        android:text="联系人"
+        android:drawableTop="@drawable/footer_lianxiren_selector"
+        android:checked="false"
+        />
+</RadioGroup>
+
+

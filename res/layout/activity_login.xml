@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="56dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/jiujiuli" />
 
     <!-- 用户名控件  -->
     <EditText
