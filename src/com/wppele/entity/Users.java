@@ -11,6 +11,13 @@ public class Users implements Serializable{
 	private int id;
 	private String username;
 	private String password;
+	private String opration;
+	public String getOpration() {
+		return opration;
+	}
+	public void setOpration(String opration) {
+		this.opration = opration;
+	}
 	public int getId() {
 		return id;
 	}

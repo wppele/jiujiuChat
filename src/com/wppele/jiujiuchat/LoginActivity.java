@@ -1,5 +1,7 @@
 package com.wppele.jiujiuchat;
 
+import com.google.gson.Gson;
+import com.wppele.client.LoginClient;
 import com.wppele.entity.Users;
 
 import android.R.string;
@@ -15,10 +17,16 @@ public class LoginActivity extends Activity {
 	private EditText et_username;
 	private EditText et_password;
 	private Users users;
+	private LoginClient client;
+	private Gson gson;
+	private String str_json;
+	private Thread t1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		client=new LoginClient();
+		gson=new Gson();
 	}
 	@Override
 	protected void onStart() {
@@ -36,10 +44,15 @@ public class LoginActivity extends Activity {
 			break;
 		case R.id.login_btn_login:
 			//点击登陆按钮获取user账户信息。
-//			users.setUsername(et_username.getText().toString());
-//			users.setPassword(et_password.getText().toString());
-//			Log.e("btn",users.getUsername()+"  "+users.getPassword());
-			//跳转到主页面，测试程序使用
+			users.setUsername(et_username.getText().toString());
+			users.setPassword(et_password.getText().toString());
+			users.setOpration("login");
+			str_json=gson.toJson(users);
+			t1=new Thread(new LoginClient(str_json));
+			t1.start();
+			//更改到此处
+			//Log.e("btn",users.getUsername()+"   "+users.getPassword()+"   "+users.getOpration());
+			Log.e("btn",str_json);
 			jumpToMainActivity();
 			break;
 
