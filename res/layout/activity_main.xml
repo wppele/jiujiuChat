@@ -1,62 +1,70 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
-    xmlns:tools="http://schemas.android.com/tools"  
-    android:layout_width="fill_parent"  
-    android:layout_height="fill_parent"  
-    android:orientation="horizontal"  
-    tools:context=".MainActivity" >  
-    
-    <LinearLayout
-        android:id="@+id/menu"  
-        android:layout_width="fill_parent"  
-        android:layout_height="fill_parent" 
-        android:orientation="vertical" 
-        android:background="#D02090" >  
-    </LinearLayout>
-
-    
-	<!-- content内容界面 -->
-	<LinearLayout 
-	    android:id="@+id/content" 
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:orientation="vertical">
-	
-	    <android.support.v4.app.FragmentTabHost
-	        android:id="@android:id/tabhost"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:yuz="http://schemas.android.com/apk/res/com.wppele.jiujiuchat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <com.wppele.slidingmenu.view.SlidingMenu
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#EE6AA7"
+	    yuz:rightPadding="100dp"
+	    >
+	    <!-- 侧滑菜单 -->
+	    <LinearLayout
+	        android:id="@+id/menu"  
 	        android:layout_width="match_parent"
-	        android:layout_height="0dp"
-	        android:layout_weight="1" >
-	
-	        <LinearLayout
-	            android:layout_width="match_parent"
-	            android:layout_height="match_parent"
-	            android:orientation="vertical" >
-	
-	            <!-- FragmentTabHost中的标签部分 -->
-	            <TabWidget
-	                android:id="@android:id/tabs"
-	                android:layout_width="match_parent"
-	                android:layout_height="wrap_content"
-	                android:visibility="gone"
-	               >
-	            </TabWidget>
-	            <!-- FragmentTabHost中的内容部分 -->
-	            <FrameLayout
-	                android:id="@android:id/tabcontent"
-	                android:layout_width="match_parent"
-	                android:layout_height="0dp"
-	                android:visibility="gone" >
-	            </FrameLayout>
-	            
-	            <!-- FragmentTabHost真正的标签内容部分 -->
-	            <FrameLayout
-	                android:id="@+id/main_realTabcontent"
-	                android:layout_width="match_parent"
-	                android:layout_height="0dp"
-	                android:layout_weight="1" >
-	            </FrameLayout>
-	        </LinearLayout>
-	    </android.support.v4.app.FragmentTabHost> 
-		 <include layout="@layout/footer_menu"/>
-	</LinearLayout>
-</LinearLayout>
+		    android:layout_height="match_parent"
+		    android:orientation="horizontal"
+	        android:background="#EE6AA7" 
+	        >  
+			<include layout="@layout/left_menu"/>
+		    
+			<!-- content内容界面 -->
+			<LinearLayout 
+			    android:id="@+id/content" 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:orientation="vertical">
+			
+			    <android.support.v4.app.FragmentTabHost
+			        android:id="@android:id/tabhost"
+			        android:layout_width="match_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="1" >
+			
+			        <LinearLayout
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:orientation="vertical" >
+			
+			            <!-- FragmentTabHost中的标签部分 -->
+			            <TabWidget
+			                android:id="@android:id/tabs"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:visibility="gone"
+			               >
+			            </TabWidget>
+			            <!-- FragmentTabHost中的内容部分 -->
+			            <FrameLayout
+			                android:id="@android:id/tabcontent"
+			                android:layout_width="match_parent"
+			                android:layout_height="0dp"
+			                android:visibility="gone" >
+			            </FrameLayout>
+			            
+			            <!-- FragmentTabHost真正的标签内容部分 -->
+			            <FrameLayout
+			                android:id="@+id/main_realTabcontent"
+			                android:layout_width="match_parent"
+			                android:layout_height="0dp"
+			                android:layout_weight="1" >
+			            </FrameLayout>
+			        </LinearLayout>
+			    </android.support.v4.app.FragmentTabHost> 
+			 	<include layout="@layout/footer_menu"/>
+			</LinearLayout>
+		</LinearLayout>
+	</com.wppele.slidingmenu.view.SlidingMenu>
+</RelativeLayout>
