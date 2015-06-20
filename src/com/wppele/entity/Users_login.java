@@ -2,13 +2,13 @@ package com.wppele.entity;
 
 import java.io.Serializable;
 
-public class Users implements Serializable{
+public class Users_login implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 3657063636771762123L;
 	
-	private int id;
+	
 	private String username;
 	private String password;
 	private String opration;
@@ -39,12 +39,7 @@ public class Users implements Serializable{
 	public void setOpration(String opration) {
 		this.opration = opration;
 	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public String getUsername() {
 		return username;
 	}

@@ -11,20 +11,21 @@ import com.wppele.util.StaticConfig;
 
 import android.util.Log;
 
-public class LoginVerify implements Callable<String> {
+public class RegisterSubmit implements Callable<String> {
+
 	private String user;
 	private ObjectOutputStream out;
 	private BufferedReader br;
-	private String account_state;
 	private StaticConfig sc;
-
-	public LoginVerify() {
+	
+	public RegisterSubmit() {
+		// TODO Auto-generated constructor stub
 	}
 
-	public LoginVerify(String user) {
+	public RegisterSubmit(String user) {
 		this.user = user;
 	}
-
+	
 	@Override
 	public String call() throws Exception {
 		try {
@@ -36,15 +37,15 @@ public class LoginVerify implements Callable<String> {
 			out.writeObject(user);
 			out.flush();
 			//读取服务器返回结果-->账号密码是否正确
-			account_state=br.readLine();
-			Log.e("login", account_state);
+//			account_state=br.readLine();
+			Log.e("login", user);
 			socket.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 			return "false";
 		}
 		//将结果返回到LoginActivity
-		return account_state;
+		return "true";
 	}
 
 }

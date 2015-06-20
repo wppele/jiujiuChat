@@ -12,7 +12,7 @@ import java.util.concurrent.Future;
 
 import com.google.gson.Gson;
 import com.wppele.client.LoginVerify;
-import com.wppele.entity.Users;
+import com.wppele.entity.Users_login;
 
 import android.app.Activity;
 import android.content.Context;
@@ -30,7 +30,7 @@ import android.widget.Toast;
 public class LoginActivity extends Activity {
 	private EditText et_username;
 	private EditText et_password;
-	private Users users;
+	private Users_login users;
 	private Gson gson;
 	private String str_json;
 	private String userip;
@@ -45,7 +45,7 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		users = new Users();
+		users = new Users_login();
 		userip = getLocalIpAddress(this);
 		et_username = (EditText) findViewById(R.id.login_et_username);
 		et_password = (EditText) findViewById(R.id.login_et_password);
