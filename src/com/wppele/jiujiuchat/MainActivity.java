@@ -2,29 +2,37 @@ package com.wppele.jiujiuchat;
 
 
 
+import com.jauker.widget.BadgeView;
 import com.wppele.fragment.ContactsFragment;
 import com.wppele.fragment.MessageFragment;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost.OnTabChangeListener;
 
 public class MainActivity extends FragmentActivity {
+	
 	//底部菜单
 	private FragmentTabHost tabHost ;
 	private RadioGroup radioGroup ;
+	
+	//消息提示
+	private BadgeView badgeview;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		initTabHost();
 		initRadioGroup();
-
 	}
+	
 	/**
 	 * 为底部菜单添加页面支持
 	 */
@@ -63,6 +71,12 @@ public class MainActivity extends FragmentActivity {
 			public void onCheckedChanged(RadioGroup arg0, int checkedId) {
 				switch(checkedId) {
 				case R.id.menu_btn_message :
+					/*if(badgeview!=null){
+						messageRadioGroup.removeView(badgeview);
+					}
+					badgeview=new BadgeView(MainActivity.this);
+					badgeview.setBadgeCount(7);
+					messageRadioGroup.addView(badgeview);*/
 					tabHost.setCurrentTab(0) ;
 					break;
 				case R.id.menu_btn_contacts :

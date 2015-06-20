@@ -23,14 +23,14 @@ public class WelcomeActivity extends Activity {
 		intent.setClass(WelcomeActivity.this,LoginActivity.class);
 		this.startActivity(intent);
 	}
-	//3秒后跳进登陆界面
+	//5秒后跳进登陆界面
 	private void setTimerTask(){
 		timer.schedule(new TimerTask() {
 			@Override
 			public void run() {
 				jumpToMusicList();
 			}
-		}, 3000);
+		}, 5000);
 	}
 	//按钮点击进入登陆界面
 	public void onClick(View view){

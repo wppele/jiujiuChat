@@ -33,8 +33,7 @@ public class SlidingMenu extends HorizontalScrollView {
 	 */
 	public SlidingMenu(Context context, AttributeSet attrs) {
 		this(context, attrs,-1);	
-	}
-	
+	}	
 	/**
 	 * 当自定义了属性时调用此构造方法
 	 * @param context
@@ -64,9 +63,6 @@ public class SlidingMenu extends HorizontalScrollView {
 		mScreenWidth=outMetrics.widthPixels;//为宽赋值 
 		
 	}
-
-
-
 	public SlidingMenu(Context context) {
 		this(context,null);
 	}
@@ -130,7 +126,7 @@ public class SlidingMenu extends HorizontalScrollView {
 		super.onScrollChanged(l, t, oldl, oldt);
 		float scale=l*1.0f/mMenuWidth;//1~0
 		//调用属性动画，设置TranslationX
-		//ViewHelper.setTranslationX(mMenu, mMenuWidth*scale);
+		ViewHelper.setTranslationX(mMenu, mMenuWidth*scale);
 		
 		/**
 		 * QQ式缩放
@@ -139,6 +135,8 @@ public class SlidingMenu extends HorizontalScrollView {
 		float leftScale = 1.0f - scale * 0.3f;
 		float leftAlpha = 0.6f + 0.4f * (1 - scale);
 
+		//调用属性动画，设置TranslationX
+		ViewHelper.setTranslationX(mMenu, mMenuWidth*scale*0.7f);
 		ViewHelper.setScaleX(mMenu, mMenuWidth*scale*0.8f);
 		ViewHelper.setScaleX(mMenu, leftScale);
 		ViewHelper.setScaleY(mMenu, leftScale);

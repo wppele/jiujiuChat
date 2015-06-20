@@ -7,7 +7,7 @@
     <com.wppele.slidingmenu.view.SlidingMenu
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:background="#EE6AA7"
+	    android:background="@drawable/menu_bj5"
 	    yuz:rightPadding="100dp"
 	    >
 	    <!-- 侧滑菜单 -->
@@ -16,7 +16,6 @@
 	        android:layout_width="match_parent"
 		    android:layout_height="match_parent"
 		    android:orientation="horizontal"
-	        android:background="#EE6AA7" 
 	        >  
 			<include layout="@layout/left_menu"/>
 		    
