@@ -65,7 +65,7 @@ public class LoginActivity extends Activity {
 			users.setPassword(et_password.getText().toString());
 			users.setOpration("login");
 			users.setUserip(userip);
-			// 点击按钮判断是否有连上wifi
+			// 点击按钮判断是否有连上wifidd
 			if (!isWifiConnected()) {
 				Toast.makeText(this, "请开启wifi以保持网络畅通", Toast.LENGTH_LONG)
 						.show();
