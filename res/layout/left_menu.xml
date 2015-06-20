@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 左边隐藏的菜单栏 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EE6AA7"
+    android:background="#0000"
     >
     
 	<LinearLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
 	    android:layout_centerInParent="true"
 	    >
+	    <!-- 个人头像显示 -->
+	    <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        >
+	        <ImageView 
+	            android:id="@+id/id_img0"
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginTop="20dp"
+	            android:src="@drawable/uu"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="20sp"
+	            android:layout_centerVertical="true"
+	            android:text="第一个Item"
+	            android:layout_marginLeft="20dp"
+	            android:layout_toRightOf="@id/id_img0"
+	            />
+	    </RelativeLayout>
 	    <RelativeLayout 
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
@@ -32,6 +58,98 @@
 	            android:text="第一个Item"
 	            android:layout_marginLeft="20dp"
 	            android:layout_toRightOf="@id/id_img1"
+	            />
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        >
+	        <ImageView 
+	            android:id="@+id/id_img2"
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginTop="20dp"
+	            android:src="@drawable/ic_launcher"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="20sp"
+	            android:layout_centerVertical="true"
+	            android:text="第二个Item"
+	            android:layout_marginLeft="20dp"
+	            android:layout_toRightOf="@id/id_img2"
+	            />
+	    </RelativeLayout>
+	     <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        >
+	        <ImageView 
+	            android:id="@+id/id_img3"
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginTop="20dp"
+	            android:src="@drawable/ic_launcher"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="20sp"
+	            android:layout_centerVertical="true"
+	            android:text="第三个Item"
+	            android:layout_marginLeft="20dp"
+	            android:layout_toRightOf="@id/id_img3"
+	            />
+	    </RelativeLayout>
+	     <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        >
+	        <ImageView 
+	            android:id="@+id/id_img4"
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginTop="20dp"
+	            android:src="@drawable/ic_launcher"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="20sp"
+	            android:layout_centerVertical="true"
+	            android:text="第四个Item"
+	            android:layout_marginLeft="20dp"
+	            android:layout_toRightOf="@id/id_img4"
+	            />
+	    </RelativeLayout>
+	     <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        >
+	        <ImageView 
+	            android:id="@+id/id_img5"
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginTop="20dp"
+	            android:src="@drawable/ic_launcher"
+	            android:layout_centerVertical="true"
+	            />
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="20sp"
+	            android:layout_centerVertical="true"
+	            android:text="第五个Item"
+	            android:layout_marginLeft="20dp"
+	            android:layout_toRightOf="@id/id_img5"
 	            />
 	    </RelativeLayout>
 	</LinearLayout>

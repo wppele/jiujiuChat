@@ -105,12 +105,14 @@ public class LoginActivity extends Activity {
 		Intent intent = new Intent();
 		intent.setClass(LoginActivity.this, RegisterActivity.class);
 		this.startActivity(intent);
+		finish();
 	}
 
 	private void jumpToMainActivity() {
 		Intent intent = new Intent();
 		intent.setClass(LoginActivity.this, MainActivity.class);
 		this.startActivity(intent);
+		finish();
 	}
 
 	private boolean isWifiConnected() {
