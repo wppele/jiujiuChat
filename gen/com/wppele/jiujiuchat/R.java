@@ -9,6 +9,16 @@ package com.wppele.jiujiuchat;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rightPadding=0x7f010000;
     }
     public static final class color {
         /**  首页菜单字体默认颜色 
@@ -43,13 +53,13 @@ public final class R {
         public static final int xiaoxi_normal=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f09002b;
+        public static final int action_settings=0x7f09002c;
         public static final int btn_welcome=0x7f090015;
-        public static final int contacts_item_iv_headpicture=0x7f090021;
-        public static final int contacts_item_tv_friendName=0x7f090022;
-        public static final int contacts_item_tv_mind=0x7f090023;
-        public static final int contacts_item_tv_state=0x7f090024;
-        public static final int contacts_iv_will=0x7f090025;
+        public static final int contacts_item_iv_headpicture=0x7f090022;
+        public static final int contacts_item_tv_friendName=0x7f090023;
+        public static final int contacts_item_tv_mind=0x7f090024;
+        public static final int contacts_item_tv_state=0x7f090025;
+        public static final int contacts_iv_will=0x7f090026;
         public static final int content=0x7f090006;
         public static final int fm_contacts_head_picture=0x7f09001a;
         public static final int fm_contacts_iv_will=0x7f09001b;
@@ -59,6 +69,7 @@ public final class R {
         public static final int fm_lv=0x7f090020;
         public static final int footermenu_rgroup=0x7f090016;
         public static final int head_picture=0x7f09001e;
+        public static final int id_img1=0x7f090021;
         public static final int ll_top=0x7f09001d;
         public static final int login_btn_login=0x7f090003;
         public static final int login_et_password=0x7f090002;
@@ -69,11 +80,11 @@ public final class R {
         public static final int menu=0x7f090005;
         public static final int menu_btn_contacts=0x7f090018;
         public static final int menu_btn_message=0x7f090017;
-        public static final int message_item_iv_headpicture=0x7f090026;
-        public static final int message_item_tv_content=0x7f090028;
-        public static final int message_item_tv_name=0x7f090027;
-        public static final int message_item_tv_time=0x7f090029;
-        public static final int message_iv_will=0x7f09002a;
+        public static final int message_item_iv_headpicture=0x7f090027;
+        public static final int message_item_tv_content=0x7f090029;
+        public static final int message_item_tv_name=0x7f090028;
+        public static final int message_item_tv_time=0x7f09002a;
+        public static final int message_iv_will=0x7f09002b;
         public static final int register_btn_register=0x7f090014;
         public static final int register_et_idCard=0x7f090011;
         public static final int register_et_nickName=0x7f090009;
@@ -96,8 +107,9 @@ public final class R {
         public static final int footer_menu=0x7f030004;
         public static final int fragment_contacts=0x7f030005;
         public static final int fragment_message=0x7f030006;
-        public static final int listview_contacts_item=0x7f030007;
-        public static final int listview_message_item=0x7f030008;
+        public static final int left_menu=0x7f030007;
+        public static final int listview_contacts_item=0x7f030008;
+        public static final int listview_message_item=0x7f030009;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -145,4 +157,35 @@ public final class R {
         public static final int radioStyle=0x7f070002;
         public static final int viewpager_title_tv=0x7f070003;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a slidingMenu.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #slidingMenu_rightPadding com.wppele.jiujiuchat:rightPadding}</code></td><td></td></tr>
+           </table>
+           @see #slidingMenu_rightPadding
+         */
+        public static final int[] slidingMenu = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.wppele.jiujiuchat.R.attr#rightPadding}
+          attribute's value can be found in the {@link #slidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wppele.jiujiuchat:rightPadding
+        */
+        public static final int slidingMenu_rightPadding = 0;
+    };
 }
