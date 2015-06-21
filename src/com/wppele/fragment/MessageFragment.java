@@ -3,7 +3,9 @@ package com.wppele.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.wppele.adapter.CommonAdapter;
 import com.wppele.entity.Messages;
+import com.wppele.jiujiuchat.MainActivity;
 import com.wppele.jiujiuchat.R;
 
 import android.os.Bundle;
@@ -23,6 +25,7 @@ public class MessageFragment extends Fragment {
 	
 	private ListView listview;
 	private List<Messages> mess;
+	private CommonAdapter commonAdapter;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,7 +39,7 @@ public class MessageFragment extends Fragment {
 
 	private void initview(View view) {
 		listview=(ListView) view.findViewById(R.id.fm_lv);
-		
+		listview.setAdapter(commonAdapter);
 	}
 
 	private void initData() {
@@ -49,6 +52,8 @@ public class MessageFragment extends Fragment {
 		
 		message= new Messages("Ú¤º®", "ÄãºÃ°¡£¡", "22:15", "pictureUrl");
 		mess.add(message);
+		
+		commonAdapter=new CommonAdapter(getActivity(), mess);
 	}
 
 }
