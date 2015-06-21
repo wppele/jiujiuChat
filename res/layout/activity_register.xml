@@ -4,6 +4,48 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical" >
+    <!-- 注册标题 -->
+     <LinearLayout 
+        android:id="@+id/register__ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+	    <Button
+		    android:id="@+id/registers_head_picture"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:layout_marginLeft="10dp"   
+		    android:layout_gravity="center_vertical"
+		    android:background="@drawable/header_btn_back_normal"
+		    android:onClick="BackToAgoPageonclick"
+		        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="填写注册信息"
+            android:textSize="30sp" 
+            android:layout_weight="1"
+            />
+        <ImageView 
+		    android:id="@+id/register_rightnull"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:layout_marginRight="10dp"   
+		    android:layout_gravity="center_vertical"
+		    
+		        />
+    </LinearLayout>
+    <!-- 隔断线 -->
+    <ImageView 
+        android:id="@+id/register_iv_will"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_below="@id/register__ll_top"
+        />
     <LinearLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"

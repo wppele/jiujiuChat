@@ -6,6 +6,7 @@ import com.jauker.widget.BadgeView;
 import com.wppele.fragment.ContactsFragment;
 import com.wppele.fragment.MessageFragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
@@ -20,6 +21,7 @@ public class MainActivity extends FragmentActivity {
 	//底部菜单
 	private FragmentTabHost tabHost ;
 	private RadioGroup radioGroup ;
+	private String uunumber;
 	
 	//消息提示
 	private BadgeView badgeview;
@@ -32,6 +34,50 @@ public class MainActivity extends FragmentActivity {
 		initTabHost();
 		initRadioGroup();
 	}
+	@Override
+	protected void onStart() {
+		Intent intent=getIntent();
+		uunumber=intent.getStringExtra("uunumber");
+		Toast.makeText(this, "欢迎您" + uunumber,
+				Toast.LENGTH_LONG).show();
+		super.onStart();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	/**
 	 * 为底部菜单添加页面支持

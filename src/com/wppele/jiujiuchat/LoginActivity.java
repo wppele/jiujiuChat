@@ -13,6 +13,7 @@ import java.util.concurrent.Future;
 import com.google.gson.Gson;
 import com.wppele.client.LoginVerify;
 import com.wppele.entity.Users_login;
+import com.wppele.util.JumpTo;
 
 import android.app.Activity;
 import android.content.Context;
@@ -34,12 +35,14 @@ public class LoginActivity extends Activity {
 	private Gson gson;
 	private String str_json;
 	private String userip;
+	private JumpTo jump;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 		gson = new Gson();
+		jump=new JumpTo();
 	}
 
 	@Override
@@ -56,7 +59,9 @@ public class LoginActivity extends Activity {
 			ExecutionException {
 		switch (view.getId()) {
 		case R.id.login_register_link:
-			jumpToRegisterActivity();
+			//jumpToRegisterActivity();
+			jump.jumpToRegisterActivity(this);
+			this.finish();
 			// Log.e("btn","注册链接");
 			break;
 		case R.id.login_btn_login:
@@ -80,9 +85,12 @@ public class LoginActivity extends Activity {
 					// 获取返回结果-->是否验证成功
 					Future<String> verify_result = pool.submit(account_verify);
 					if (verify_result.get().toString().equals("true")) {
-						Toast.makeText(this, "欢迎您" + users.getUsername(),
-								Toast.LENGTH_LONG).show();
-						jumpToMainActivity();
+//						Toast.makeText(this, "欢迎您" + users.getUsername(),
+//								Toast.LENGTH_LONG).show();
+						
+						jump.jumpToMainActivity(this,users.getUsername());
+						this.finish();
+						
 					} else {
 						Toast.makeText(this, "账号或密码错误", Toast.LENGTH_SHORT)
 								.show();
@@ -99,20 +107,6 @@ public class LoginActivity extends Activity {
 		default:
 			break;
 		}
-	}
-
-	private void jumpToRegisterActivity() {
-		Intent intent = new Intent();
-		intent.setClass(LoginActivity.this, RegisterActivity.class);
-		this.startActivity(intent);
-		finish();
-	}
-
-	private void jumpToMainActivity() {
-		Intent intent = new Intent();
-		intent.setClass(LoginActivity.this, MainActivity.class);
-		this.startActivity(intent);
-		finish();
 	}
 
 	private boolean isWifiConnected() {

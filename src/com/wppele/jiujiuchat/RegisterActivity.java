@@ -1,6 +1,7 @@
 package com.wppele.jiujiuchat;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -63,7 +64,7 @@ public class RegisterActivity extends Activity{
 		gson = new Gson();
 		users=new Users_register();
 	}
-	public void RegisterOnclick(View view){
+	public void RegisterOnclick(View view) throws InterruptedException, ExecutionException{
 		switch (view.getId()) {
 		case R.id.register_btn_register:
 			nickname=et_nickname.getText().toString();
@@ -91,19 +92,38 @@ public class RegisterActivity extends Activity{
 					Callable<String> account_verify = new RegisterSubmit(str_json);
 					// 获取返回结果-->是否验证成功
 					Future<String> verify_result = pool.submit(account_verify);
-					Log.e("login", verify_result.toString());
+					String uunumber=verify_result.get().toString();
+					Log.e("login", uunumber);
+					RegisterSuccess(uunumber,password);
+//					if(!uunumber.equals("false")){
+//						RegisterSuccess(uunumber,password);
+//					}else{
+//						Toast.makeText(this, "注册失败，请稍后再试", Toast.LENGTH_SHORT).show();
+//					}
 				}
 			}else{
 				Toast.makeText(this, "请填写完整信息", Toast.LENGTH_SHORT).show();
 			}
-			//RegisterSuccess();
+			
 			break;
 		default:break;
 		}
 	}
-	private void RegisterSuccess(){
+	public void BackToAgoPageonclick(View view){
 		Intent intent=new Intent();
 		intent.setClass(RegisterActivity.this,LoginActivity.class);
+		this.startActivity(intent);
+		finish();
+	}
+	/**
+	 * 如果注册成功
+	 * 开启RegisterSuccessActivity页面
+	 */
+	private void RegisterSuccess(String uunumber,String password){
+		Intent intent=new Intent();
+		intent.putExtra("uunumber", uunumber);
+		intent.putExtra("password", password);
+		intent.setClass(RegisterActivity.this,RegisterSuccessActivity.class);
 		this.startActivity(intent);
 		finish();
 	}

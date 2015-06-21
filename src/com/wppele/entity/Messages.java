@@ -41,11 +41,11 @@ public class Messages {
 		this.pictureUrl = pictureUrl;
 	}
 	
-	@Override
+	/*@Override
 	public String toString() {
 		return "Messages [name=" + name + ", content=" + content + ", time="
 				+ time + ", pictureUrl=" + pictureUrl + "]";
-	}
+	}*/
 	
 	
 }

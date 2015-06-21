@@ -14,6 +14,7 @@ import android.util.Log;
 public class RegisterSubmit implements Callable<String> {
 
 	private String user;
+	private String uunumber;
 	private ObjectOutputStream out;
 	private BufferedReader br;
 	private StaticConfig sc;
@@ -37,15 +38,15 @@ public class RegisterSubmit implements Callable<String> {
 			out.writeObject(user);
 			out.flush();
 			//读取服务器返回结果-->账号密码是否正确
-//			account_state=br.readLine();
-			Log.e("login", user);
+			uunumber=br.readLine();
+			Log.e("login", uunumber);
 			socket.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 			return "false";
 		}
-		//将结果返回到LoginActivity
-		return "true";
+		//将结果返回到RegisterActivity
+		return uunumber;
 	}
 
 }
