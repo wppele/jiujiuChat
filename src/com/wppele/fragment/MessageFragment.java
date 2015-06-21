@@ -53,6 +53,11 @@ public class MessageFragment extends Fragment {
 		message= new Messages("Ú¤º®", "ÄãºÃ°¡£¡", "22:15", "pictureUrl");
 		mess.add(message);
 		
+		message= new Messages("½©Ê¬", "ÄãÊÇË­£¡", "22:15", "pictureUrl");
+		mess.add(message);
+		message= new Messages("Â½ÀÏ°å", "ÕæÀ÷º¦°¡", "22:15", "pictureUrl");
+		mess.add(message);
+		
 		commonAdapter=new CommonAdapter(getActivity(), mess);
 	}
 

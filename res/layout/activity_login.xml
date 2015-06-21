@@ -81,4 +81,15 @@
             android:text="      "/>
     </LinearLayout>
 
+	<Button
+	    android:id="@+id/login_btn_test"
+	    android:layout_width="100dp"
+	    android:layout_height="52dp"
+	    android:layout_alignLeft="@+id/login_pic"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="34dp"
+	    android:layout_marginLeft="15dp"
+	    android:onClick="LoginOnClick"
+	    android:text="测试登陆" />
+
 </RelativeLayout>

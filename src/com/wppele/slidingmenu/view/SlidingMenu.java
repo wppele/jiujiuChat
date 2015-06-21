@@ -21,9 +21,7 @@ public class SlidingMenu extends HorizontalScrollView {
 	private ViewGroup mContent;   //内容区域
 	private int mScreenWidth;     //屏幕宽度
 	private int mMenuWidth;       //设置menu的宽度
-	
 	private int mMenuRightPadding=50;//menu 和右侧屏幕的剩余距离 50dp
-	
 	private boolean once;
 	
 	/**
@@ -34,6 +32,7 @@ public class SlidingMenu extends HorizontalScrollView {
 	public SlidingMenu(Context context, AttributeSet attrs) {
 		this(context, attrs,-1);	
 	}	
+	
 	/**
 	 * 当自定义了属性时调用此构造方法
 	 * @param context

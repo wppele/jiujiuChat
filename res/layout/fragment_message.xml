@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="#fff">
+    android:background="#FCFCFC">
     <!-- 消息页面标头 -->
     <LinearLayout 
         android:id="@+id/ll_top"
@@ -56,6 +56,7 @@
             android:id="@+id/fm_lv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:divider="@null" 
             ></ListView>
     </LinearLayout>
 </RelativeLayout>

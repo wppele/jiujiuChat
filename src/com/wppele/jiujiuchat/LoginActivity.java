@@ -58,6 +58,14 @@ public class LoginActivity extends Activity {
 	public void LoginOnClick(View view) throws InterruptedException,
 			ExecutionException {
 		switch (view.getId()) {
+//≤‚ ‘∞¥≈•******************************************************************************************
+		case R.id.login_btn_test:
+			Intent intent = new Intent();
+			intent.setClass(LoginActivity.this, MainActivity.class);
+			this.startActivity(intent);
+			this.finish();
+			break;
+//≤‚ ‘∞¥≈•******************************************************************************************
 		case R.id.login_register_link:
 			//jumpToRegisterActivity();
 			jump.jumpToRegisterActivity(this);
@@ -103,7 +111,7 @@ public class LoginActivity extends Activity {
 			}
 
 			break;
-
+		
 		default:
 			break;
 		}
