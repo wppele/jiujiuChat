@@ -26,7 +26,7 @@ public class MainActivity extends FragmentActivity {
 	//底部菜单
 	private FragmentTabHost tabHost ;
 	private RadioGroup radioGroup ;
-	protected String uunumber;
+	protected String userinfo_json;
 	//消息提示
 	private BadgeView badgeview;
 	
@@ -53,8 +53,10 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onStart() {
 		Intent intent=getIntent();
-		uunumber=intent.getStringExtra("uunumber");
-		Toast.makeText(this, "欢迎您" + uunumber,
+		userinfo_json=intent.getStringExtra("userinfo_json");
+		users_login=gson.fromJson(userinfo_json,Users_login.class);
+		getIntent().putExtra("infoFromMain", userinfo_json);
+		Toast.makeText(this, "欢迎您" + users_login.getUsername(),
 
 				Toast.LENGTH_LONG).show();
 		super.onStart();

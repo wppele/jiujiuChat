@@ -14,9 +14,9 @@ public class JumpTo {
 		context.startActivity(intent);
 	}
 
-	public void jumpToMainActivity(Context context,String uunumber) {
+	public void jumpToMainActivity(Context context,String userinfo_json) {
 		Intent intent = new Intent();
-		intent.putExtra("uunumber",uunumber);
+		intent.putExtra("userinfo_json",userinfo_json);
 		intent.setClass(context, MainActivity.class);
 		context.startActivity(intent);
 	}

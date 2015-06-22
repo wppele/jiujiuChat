@@ -94,7 +94,7 @@ public class LoginActivity extends Activity {
 //						Toast.makeText(this, "»¶Ó­Äú" + users.getUsername(),
 //								Toast.LENGTH_LONG).show();
 						
-						jump.jumpToMainActivity(this,users.getUsername());
+						jump.jumpToMainActivity(this,str_json);
 
 						this.finish();
 						
