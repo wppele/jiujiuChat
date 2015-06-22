@@ -14,6 +14,7 @@
 	        android:id="@+id/message_item_iv_headpicture"
 	        android:layout_width="50dp"
 	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
 	        android:layout_gravity="center_vertical"
 			android:src="@drawable/ic_launcher"
 	        />
@@ -31,7 +32,6 @@
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:singleLine="true"
-		        android:typeface="sans"
 		        android:textSize="18sp"
 		        android:textColor="#000" 
 		        android:text="守莣"
@@ -61,7 +61,7 @@
 	<ImageView 
         android:id="@+id/message_item_iv_will"
         android:layout_width="match_parent"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="60dp"
         android:layout_height="0.6dp"
         android:background="#CDC9C9"
         android:layout_below="@id/ll_top"

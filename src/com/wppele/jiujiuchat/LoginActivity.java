@@ -1,9 +1,5 @@
 package com.wppele.jiujiuchat;
 
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Enumeration;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -12,7 +8,9 @@ import java.util.concurrent.Future;
 
 import com.google.gson.Gson;
 import com.wppele.client.LoginVerify;
+
 import com.wppele.entity.Users_login;
+
 import com.wppele.util.JumpTo;
 
 import android.app.Activity;
@@ -97,6 +95,7 @@ public class LoginActivity extends Activity {
 //								Toast.LENGTH_LONG).show();
 						
 						jump.jumpToMainActivity(this,users.getUsername());
+
 						this.finish();
 						
 					} else {

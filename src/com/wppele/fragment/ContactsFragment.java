@@ -4,7 +4,7 @@ package com.wppele.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.wppele.adapter.CommonAdapter;
+import com.wppele.adapter.MessageAdapter;
 import com.wppele.adapter.ContactAdapter;
 import com.wppele.entity.Messages;
 import com.wppele.entity.Users_contact;
@@ -36,6 +36,31 @@ public class ContactsFragment extends Fragment{
 		
 		return view ;
 	}
+	
+	public void Onclick(View view){
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	private void initview(View view) {
 		listview=(ListView) view.findViewById(R.id.fm_contacts_lv);
@@ -44,18 +69,18 @@ public class ContactsFragment extends Fragment{
 
 	private void initData() {
 		contact=new ArrayList<Users_contact>();
-		Users_contact message= new Users_contact("守望o0轮回", "我是你爸爸", "22:15", "pictureUrl");
+		Users_contact message= new Users_contact("守望o0轮回", "我是你爸爸", "[在线]", "pictureUrl");
 		contact.add(message);
 		
-		message= new Users_contact("枭雄∝絕影", "你是谁爸爸？", "22:15", "pictureUrl");
+		message= new Users_contact("枭雄∝絕影", "你是谁爸爸？", "[在线]", "pictureUrl");
 		contact.add(message);
 		
-		message= new Users_contact("冥寒", "你好啊！", "22:15", "pictureUrl");
+		message= new Users_contact("冥寒", "你好啊！", "[在线]", "pictureUrl");
 		contact.add(message);
 		
-		message= new Users_contact("僵尸", "你是谁！", "22:15", "pictureUrl");
+		message= new Users_contact("僵尸", "你是谁！", "[在线]", "pictureUrl");
 		contact.add(message);
-		message= new Users_contact("陆老板", "真厉害啊", "22:15", "pictureUrl");
+		message= new Users_contact("陆老板", "真厉害啊", "[在线]", "pictureUrl");
 		contact.add(message);
 		
 		commonAdapter=new ContactAdapter(getActivity(), contact);

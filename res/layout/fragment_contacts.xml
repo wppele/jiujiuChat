@@ -28,13 +28,14 @@
             android:textSize="30sp" 
             android:layout_weight="1"
             />
-        <ImageView 
-		    android:id="@+id/fm_contacts_rightnull"
+        <ImageView
+		    android:id="@+id/fm_contacts_addfriend"
 		    android:layout_width="40dp"
 		    android:layout_height="40dp"
 		    android:layout_marginRight="10dp"   
 		    android:layout_gravity="center_vertical"
-		    
+		    android:src="@drawable/header_btn_addfriend_nor"
+		    android:onClick="Onclick()"
 		        />
     </LinearLayout>
     <!-- 隔断线 -->
@@ -56,6 +57,7 @@
             android:id="@+id/fm_contacts_lv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:divider="@null" 
             ></ListView>
     </LinearLayout>
 </RelativeLayout>

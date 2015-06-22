@@ -46,6 +46,7 @@ public class RegisterSubmit implements Callable<String> {
 			return "false";
 		}
 		//将结果返回到RegisterActivity
+
 		return uunumber;
 	}
 

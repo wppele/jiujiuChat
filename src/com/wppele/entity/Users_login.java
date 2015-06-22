@@ -3,6 +3,7 @@ package com.wppele.entity;
 import java.io.Serializable;
 
 public class Users_login implements Serializable{
+
 	/**
 	 * 
 	 */
@@ -39,7 +40,6 @@ public class Users_login implements Serializable{
 	public void setOpration(String opration) {
 		this.opration = opration;
 	}
-
 	public String getUsername() {
 		return username;
 	}

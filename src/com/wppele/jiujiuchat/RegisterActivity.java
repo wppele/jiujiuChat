@@ -11,6 +11,17 @@ import com.wppele.client.LoginVerify;
 import com.wppele.client.RegisterSubmit;
 import com.wppele.entity.Users_register;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+import com.google.gson.Gson;
+import com.wppele.client.LoginVerify;
+import com.wppele.client.RegisterSubmit;
+import com.wppele.entity.Users_register;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -65,6 +76,7 @@ public class RegisterActivity extends Activity{
 		users=new Users_register();
 	}
 	public void RegisterOnclick(View view) throws InterruptedException, ExecutionException{
+
 		switch (view.getId()) {
 		case R.id.register_btn_register:
 			nickname=et_nickname.getText().toString();
@@ -104,7 +116,6 @@ public class RegisterActivity extends Activity{
 			}else{
 				Toast.makeText(this, "请填写完整信息", Toast.LENGTH_SHORT).show();
 			}
-			
 			break;
 		default:break;
 		}

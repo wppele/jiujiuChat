@@ -26,9 +26,11 @@ public class LoginVerify implements Callable<String> {
 	}
 
 	@Override
+
 	public String call() throws Exception {
 		try {
 			//建立与服务器的链接..
+
 			Socket socket = new Socket(sc.SERVER_IP,8898);
 			out=new ObjectOutputStream(socket.getOutputStream());
 			br=new BufferedReader(new InputStreamReader(socket.getInputStream()));

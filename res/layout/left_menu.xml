@@ -1,176 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!-- 左边隐藏的菜单栏 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-	<!-- 左边隐藏的菜单栏 -->
-	<RelativeLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:background="#0000"
-	    >
-	    <!-- 个人信息显示 -->
-		<RelativeLayout 
-		    android:id="@+id/leftmenu_iv_rl_info"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:layout_marginTop="80dp"
-		    >
-		    <ImageView 
-		    android:id="@+id/id_img0"
-		    android:layout_width="50dp"
-		    android:layout_height="50dp"
-		    android:layout_marginLeft="20dp"
-		    android:layout_marginTop="20dp"
-		    android:src="@drawable/uu"
-		    android:layout_centerVertical="true"
-		    />
-		    <TextView 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:textSize="20sp"
-		    android:layout_centerVertical="true"
-		    android:text="守望"
-		    android:layout_marginLeft="20dp"
-		    android:layout_toRightOf="@id/id_img0"
-		    />
-		</RelativeLayout>
-		<!-- 分割线 -->
-		<ImageView 
-	        android:id="@+id/leftmenu_item_iv_will"
-	        android:layout_width="match_parent"
-	        android:layout_marginLeft="20dp"
-	        android:layout_height="0.1dp"
-	        android:background="#404040"
-	        android:layout_below="@id/leftmenu_iv_rl_info"
-	        />
-		<LinearLayout 
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:orientation="vertical"
-		    android:layout_below="@id/leftmenu_item_iv_will"
-		    >
-			<!-- 我的UU会员************************************************************** -->
-		    <RelativeLayout 
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        
-		        >
-		        <ImageView 
-		            android:id="@+id/leftmenu_iv_img1"
-		            android:layout_width="20dp"
-		            android:layout_height="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginTop="20dp"
-		            android:src="@drawable/ic_launcher"
-		            android:layout_centerVertical="true"
-		            />
-		        <TextView 
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:textSize="20sp"
-		            android:layout_centerVertical="true"
-		            android:text="我的UU会员"
-		            android:layout_marginLeft="20dp"
-		            android:layout_toRightOf="@id/leftmenu_iv_img1"
-		            />
-		    </RelativeLayout>
-		    <!-- 我的UU钱包************************************************************** -->
-		    <RelativeLayout 
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        >
-		        <ImageView 
-		            android:id="@+id/leftmenu_iv_img2"
-		            android:layout_width="20dp"
-		            android:layout_height="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginTop="20dp"
-		            android:src="@drawable/ic_launcher"
-		            android:layout_centerVertical="true"
-		            />
-		        <TextView 
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:textSize="20sp"
-		            android:layout_centerVertical="true"
-		            android:text="我的UU钱包"
-		            android:layout_marginLeft="20dp"
-		            android:layout_toRightOf="@id/leftmenu_iv_img2"
-		            />
-		    </RelativeLayout>
-		    <!-- 我的个性装扮************************************************************** -->
-		     <RelativeLayout 
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        >
-		        <ImageView 
-		            android:id="@+id/leftmenu_iv_img3"
-		            android:layout_width="20dp"
-		            android:layout_height="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginTop="20dp"
-		            android:src="@drawable/ic_launcher"
-		            android:layout_centerVertical="true"
-		            />
-		        <TextView 
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:textSize="20sp"
-		            android:layout_centerVertical="true"
-		            android:text="我的个性装扮"
-		            android:layout_marginLeft="20dp"
-		            android:layout_toRightOf="@id/leftmenu_iv_img3"
-		            />
-		    </RelativeLayout>
-		    <!-- 我的个人信息************************************************************** -->
-		     <RelativeLayout 
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        >
-		        <ImageView 
-		            android:id="@+id/leftmenu_iv_img4"
-		            android:layout_width="20dp"
-		            android:layout_height="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginTop="20dp"
-		            android:src="@drawable/ic_launcher"
-		            android:layout_centerVertical="true"
-		            />
-		        <TextView 
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:textSize="20sp"
-		            android:layout_centerVertical="true"
-		            android:text="我的个人信息"
-		            android:layout_marginLeft="20dp"
-		            android:layout_toRightOf="@id/leftmenu_iv_img4"
-		            />
-		    </RelativeLayout>
-		    <!-- 退出UU************************************************************** -->
-		     <RelativeLayout 
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        >
-		        <ImageView 
-		            android:id="@+id/leftmenu_iv_img5"
-		            android:layout_width="20dp"
-		            android:layout_height="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginTop="20dp"
-		            android:src="@drawable/ic_launcher"
-		            android:layout_centerVertical="true"
-		            />
-		        <TextView 
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:textSize="20sp"
-		            android:layout_centerVertical="true"
-		            android:text="退出当前账号"
-		            android:layout_marginLeft="20dp"
-		            android:layout_toRightOf="@id/leftmenu_iv_img5"
-		            />
-		    </RelativeLayout>
-		</LinearLayout>
-	</RelativeLayout>
-</ScrollView>
+    android:background="#0000" >
+
+    <!-- 个人信息显示 -->
+
+    <RelativeLayout
+        android:id="@+id/leftmenu_iv_rl_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp" >
+
+        <ImageView
+            android:id="@+id/id_img0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/uu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/id_img0"
+            android:text="守望"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!-- 分割线 -->
+
+    <ImageView
+        android:id="@+id/leftmenu_item_iv_will"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/leftmenu_iv_rl_info"
+        android:layout_marginLeft="20dp"
+        android:background="#404040" />
+    <TextView 
+        android:id="@+id/leftmenu_tv_mymood"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/leftmenu_item_iv_will"
+        android:text="这里是我的心情"
+        />
+    <!-- 分隔线 -->
+    <ImageView
+        android:id="@+id/leftmenu_item_iv_will2"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/leftmenu_tv_mymood"
+        android:layout_marginLeft="20dp"
+        android:background="#404040" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/leftmenu_item_iv_will2"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/leftmenu_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+             >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:orientation="horizontal" 
-    >
-
-    <!-- 图标显示 -->
-
-    <ImageView
-        android:id="@+id/leftmenu_item_iv_picture"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_launcher" 
-        />
-    
-    <!-- 菜单名称显示 -->
-
-    <TextView
-        android:id="@+id/leftmenu_item_tv_menuname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:text="守莣"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:typeface="sans" 
-        />
-    
-    <!-- 箭头 -->
-
-    <ImageView
-        android:id="@+id/leftmenu_item_iv_jumpto"
-        android:layout_width="130dp"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="22:15" />
+    android:layout_height="45dp"
+    android:orientation="horizontal" >
+	
+         <!-- 图标显示 -->
+	    <ImageView
+	        android:id="@+id/leftmenu_item_iv_icon"
+	        android:layout_width="40dp"
+	        android:layout_height="25dp"
+	        android:layout_centerInParent="true"
+	       	android:layout_gravity="center"
+	        android:layout_marginLeft="20dp"
+	        android:src="@drawable/ic_launcher" 
+	        />
+ 
+   		<!-- 菜单名称显示 -->
+	    <TextView
+	        android:id="@+id/leftmenu_item_tv_menuname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_centerInParent="true"
+	        android:gravity="center_vertical"
+	        android:layout_weight="1"
+	        android:text="我的UU会员"
+	        android:textSize="20sp" 
+	        />
+	
+	    <!-- 箭头 -->
+	    <ImageView
+	        android:id="@+id/leftmenu_item_iv_arry"
+	        android:layout_width="30dp"
+	        android:layout_height="25dp"
+	        android:layout_centerInParent="true"
+	        android:layout_gravity="center"
+	        android:layout_marginRight="10dp"
+	        android:src="@drawable/ic_launcher" 
+	        />
 
 </LinearLayout>

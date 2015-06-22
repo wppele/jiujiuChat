@@ -1,8 +1,13 @@
 package com.wppele.jiujiuchat;
 
+import java.util.ArrayList;
+import java.util.List;
 
-
+import com.google.gson.Gson;
 import com.jauker.widget.BadgeView;
+import com.wppele.adapter.MenuAdapter;
+import com.wppele.entity.MenuLeft;
+import com.wppele.entity.Users_login;
 import com.wppele.fragment.ContactsFragment;
 import com.wppele.fragment.MessageFragment;
 
@@ -10,7 +15,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -22,10 +27,16 @@ public class MainActivity extends FragmentActivity {
 	private FragmentTabHost tabHost ;
 	private RadioGroup radioGroup ;
 	private String uunumber;
-	
 	//消息提示
 	private BadgeView badgeview;
 	
+	//数据处理
+	private Gson gson;
+	Users_login users_login;
+	//adapter
+	private ListView listview;
+	private List<MenuLeft> menu;
+	private MenuAdapter commonAdapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +44,47 @@ public class MainActivity extends FragmentActivity {
 		setContentView(R.layout.activity_main);
 		initTabHost();
 		initRadioGroup();
+		gson=new Gson();
+		users_login=new Users_login();
+		//listview适配器相关
+		initData();//初始化数据
+		initview();//初始化view
 	}
 	@Override
 	protected void onStart() {
 		Intent intent=getIntent();
 		uunumber=intent.getStringExtra("uunumber");
 		Toast.makeText(this, "欢迎您" + uunumber,
+
 				Toast.LENGTH_LONG).show();
 		super.onStart();
 	}
 	
 	
-	
-	
+	/**
+	 * 为侧边菜单设置listview和配置adapter
+	 */
+	private void initview() {
+		listview=(ListView) findViewById(R.id.leftmenu_lv);
+		listview.setAdapter(commonAdapter);
+	}
+	private void initData() {
+		menu=new ArrayList<MenuLeft>();
+		MenuLeft message= new MenuLeft("ic_launcher.png", "我的UU会员","ic_launcher.png");
+		menu.add(message);
+		
+		message= new MenuLeft("ic_launcher.png", "UU钱包","ic_launcher.png");
+		menu.add(message);
+		
+		message= new MenuLeft("ic_launcher.png", "我的个人设置","ic_launcher.png");
+		menu.add(message);
+		
+		message= new MenuLeft("ic_launcher.png", "注销当前账号","ic_launcher.png");
+		menu.add(message);
+		
+		
+		commonAdapter=new MenuAdapter(this, menu);
+	}
 	
 	
 	
