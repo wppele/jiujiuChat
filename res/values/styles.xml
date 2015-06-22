@@ -40,4 +40,9 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+
+    <style name="my_edittext_style" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/chatwindow_chatskin</item>
+    </style>
+
 </resources>

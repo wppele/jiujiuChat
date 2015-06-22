@@ -33,6 +33,7 @@
         </activity>
         <activity android:name="RegisterActivity"></activity>
         <activity android:name="RegisterSuccessActivity"></activity>
+        <activity android:name="ChatWindowActivity"></activity>
 
     </application>
 

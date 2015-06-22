@@ -59,7 +59,7 @@ public class LoginActivity extends Activity {
 //≤‚ ‘∞¥≈•******************************************************************************************
 		case R.id.login_btn_test:
 			Intent intent = new Intent();
-			intent.setClass(LoginActivity.this, MainActivity.class);
+			intent.setClass(LoginActivity.this, ChatWindowActivity.class);
 			this.startActivity(intent);
 			this.finish();
 			break;

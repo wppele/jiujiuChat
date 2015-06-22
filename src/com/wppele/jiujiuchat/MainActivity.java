@@ -26,7 +26,7 @@ public class MainActivity extends FragmentActivity {
 	//底部菜单
 	private FragmentTabHost tabHost ;
 	private RadioGroup radioGroup ;
-	private String uunumber;
+	protected String uunumber;
 	//消息提示
 	private BadgeView badgeview;
 	
